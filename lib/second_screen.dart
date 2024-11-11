@@ -12,7 +12,7 @@ class SecondScreen extends StatefulWidget {
 class _SecondScreenState extends State<SecondScreen> {
   @override
   void deactivate() {
-    log("Called deactivation in second screen");
+    log("Called deactivate in second screen");
     super.deactivate();
   }
 

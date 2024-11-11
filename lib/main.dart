@@ -41,17 +41,14 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  @override
-  void didUpdateWidget(covariant MyHomePage oldWidget) {
-    log("Called didUpdateWidget");
-    super.didUpdateWidget(oldWidget);
-  }
+ 
 
   @override
   void didChangeDependencies() {
-    super.didChangeDependencies();
-    log("Called didChangeDependencies of home screen");
     // Code to respond to dependency changes
+    super.didChangeDependencies();
+    log("Called didChangeDependencies in home screen");
+    
   }
 
   @override
@@ -68,8 +65,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+    // didChangeDependencies will call when fetch widget
     final width = MediaQuery.of(context).size.width;
     log("Width:- $width");
+
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
